@@ -14,7 +14,7 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-    { name: "Home", href: "/" },
+
     { name: "About us", href: "/#about" },
     {
         name: "Services",
@@ -44,6 +44,7 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [logoHovered, setLogoHovered] = useState(false)
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
     const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null)
 
@@ -64,19 +65,45 @@ export default function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                "bg-white  border-b border-black/5",
-                scrolled ? "py-3 shadow-md" : "py-5"
+                "bg-transparent  border-b border-black/5",
+                scrolled ? "py-3 shadow-md bg-white" : "py-5"
             )}
             onMouseLeave={() => {
                 setActiveDropdown(null)
                 setActiveSubDropdown(null)
             }}
         >
-            <div className="max-w-8xl mx-auto px-6 flex items-center justify-between">
+            <div className="max-w-9xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo Section */}
-                <Link href="/" className="flex justify-center h-auto w-auto items-center text-center  gap-3 group">
-                    <img src="/VERTXSOFT.png" alt="VertxSoft Logo" className="h-16 w-40 object-cover" />
+                <Link
+                    href="/"
+                    className="group flex items-center"
+                    onMouseEnter={() => setLogoHovered(true)}
+                    onMouseLeave={() => setLogoHovered(false)}
+                >
+                    <div className="relative flex items-center overflow-hidden h-14">
+                        <img
+                            src="/herosvgicon/smallV.png"
+                            alt="VertxSoft Logo"
+                            className={cn(
+                                "h-10 w-auto object-cover opacity-90 transition-transform duration-500",
+                                logoHovered ? "scale-110" : "scale-100"
+                            )}
+                        />
+                        <div className={cn(
+                            "flex items-center overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                            logoHovered ? "max-w-[200px] opacity-100" : "max-w-0 opacity-0"
+                        )}>
+                            <span className={cn(
+                                "text-xl font-bold text-[#133848] whitespace-nowrap pl-3 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                                logoHovered ? "translate-x-0" : "translate-x-[-20px]"
+                            )}>
+                                VertxSoft
+                            </span>
+                        </div>
+                    </div>
                 </Link>
+
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center gap-8">
@@ -152,7 +179,7 @@ export default function Navbar() {
 
                 {/* CTA Button */}
                 <div className="hidden lg:block">
-                    <button className="px-8 py-3 rounded bg-brand-blue text-white text-[15px] hover:bg-blue-700 hover:shadow-[0_0_30px_rgba(12,113,195,0.4)] transition-all transform active:scale-95 font-medium">
+                    <button className="px-8 py-3 rounded bg-[#3DBEF8] text-white text-[15px] hover:bg-[#2cb1ee] hover:shadow-[0_0_30px_rgba(12,113,195,0.4)] transition-all transform active:scale-95 font-medium">
                         Get Free Quote
                     </button>
                 </div>

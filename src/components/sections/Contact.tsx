@@ -39,7 +39,7 @@ export default function Contact() {
                                 <input
                                     type="text"
                                     placeholder="John Doe"
-                                    className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-brand-blue outline-none transition-colors text-slate-900 placeholder:text-slate-400"
+                                    className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-[#11aff9] outline-none transition-colors text-slate-900 placeholder:text-slate-400"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -47,7 +47,7 @@ export default function Contact() {
                                 <input
                                     type="email"
                                     placeholder="john@example.com"
-                                    className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-brand-blue outline-none transition-colors text-slate-900 placeholder:text-slate-400"
+                                    className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-[#11aff9] outline-none transition-colors text-slate-900 placeholder:text-slate-400"
                                 />
                             </div>
                         </div>
@@ -57,11 +57,11 @@ export default function Contact() {
                             <textarea
                                 rows={5}
                                 placeholder="Tell us about your project..."
-                                className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-brand-blue outline-none transition-colors resize-none text-slate-900 placeholder:text-slate-400"
+                                className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-[#11aff9] outline-none transition-colors resize-none text-slate-900 placeholder:text-slate-400"
                             />
                         </div>
 
-                        <button className="w-full py-5 rounded-2xl bg-brand-blue text-white font-black text-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-3">
+                        <button className="w-full py-5 rounded-2xl bg-[#3DBEF8] text-white font-black text-lg hover:bg-[#11aff9] transition-colors flex items-center justify-center gap-3">
                             Send Message <Send className="w-5 h-5" />
                         </button>
                     </form>
@@ -74,7 +74,7 @@ export default function Contact() {
 function ContactInfo({ Icon, title, text }: { Icon: any, title: string, text: string }) {
     return (
         <div className="flex items-start gap-6 group">
-            <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 group-hover:bg-brand-blue group-hover:text-white transition-all">
+            <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 group-hover:bg-[#11aff9] group-hover:text-white transition-all">
                 <Icon className="w-6 h-6" />
             </div>
             <div>

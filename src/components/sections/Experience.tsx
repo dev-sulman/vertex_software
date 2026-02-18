@@ -15,15 +15,7 @@ export default function Experience() {
         <section className=" bg-[#ffffff] overflow-hidden">
             <div className="max-w-9xl mx-auto">
                 <div className="space-y-4 mb-4">
-                    <ScrollRadiusMedia
-                        src="/image1.JPG"
-                        type="image"
-                        startRadius={20}
-                        endRadius={12}
-                        startPadding={30}
-                        endPadding={0}
-                        className="relative w-full aspect-21/9 shadow-[0_0_100px_rgba(0,0,0,0.8)]"
-                    />
+                
 
                
                 </div>
@@ -48,7 +40,7 @@ export default function Experience() {
                                     transition={{ duration: 0.8, delay: index * 0.2 }}
                                     viewport={{ once: true }}
                                 >
-                                    <div className="text-6xl lg:text-7xl font-medium text-brand-blue mb-3 text-glow">
+                                    <div className="text-6xl lg:text-7xl font-medium text-[#11aff9] mb-3 text-glow">
                                         {stat.number}
                                     </div>
                                     <div className="text-slate-800 text-lg font-medium leading-tight max-w-[200px]">
@@ -79,7 +71,7 @@ export default function Experience() {
                                 className="space-y-8 text-slate-700 text-xl leading-relaxed max-w-3xl font-medium"
                             >
                                 <p>
-                                    We don't just build software — we craft digital experiences that <span className="text-brand-blue font-semibold">inspire users</span> and accelerate business growth through smart, scalable technology.
+                                    We don't just build software — we craft digital experiences that <span className="text-[#11aff9] font-semibold">inspire users</span> and accelerate business growth through smart, scalable technology.
                                 </p>
                                 <p>
                                     Our solutions are designed with precision, blending creativity, innovation, and functionality to deliver <span className="text-electric-cyan font-bold">seamless performance</span> across every platform.

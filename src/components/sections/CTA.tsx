@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { GravityText } from "@/components/ui/gravity-text"
 
 export default function CTA() {
     return (
@@ -14,17 +15,18 @@ export default function CTA() {
                     className="relative glass rounded-[40px] p-12 md:p-24 overflow-hidden group"
                 >
                     {/* Background Blobs */}
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-[#0C71C3]/20 rounded-full blur-[100px] -z-10 group-hover:bg-[#0C71C3]/30 transition-colors" />
-                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#004F8A]/10 rounded-full blur-[100px] -z-10" />
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-[#0C71C3] blur-[100px] -z-10 transition-colors" />
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#004F8A] blur-[100px] -z-10" />
 
                     <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
                         <h2 className="text-4xl md:text-7xl font-black mb-8 leading-tight">
-                            Take Your Business to the <span className="text-gradient">Next Level</span> Right Now!
+                            <GravityText text="Take Your Business to the" />
+                            <span className="text-gradient">Next Level</span> Right Now!
                         </h2>
                         <p className="text-xl text-white/60 mb-12 max-w-xl">
                             Don't let your technology hold you back. Partner with Yellow Beam Tech and build the future today.
                         </p>
-                        <button className="px-10 py-5 rounded-full bg-[#0C71C3] text-white font-black text-xl hover:scale-105 transition-transform flex items-center gap-3">
+                        <button className="px-10 py-5 rounded-full bg-[#11aff9] text-white font-black text-xl hover:scale-105 transition-transform flex items-center gap-3">
                             Start Now <ArrowRight className="w-6 h-6" />
                         </button>
                     </div>

@@ -10,7 +10,7 @@ import { Compass, FileText, Code2, Rocket, ArrowRight } from "lucide-react"
 // --- 3D Background Component ---
 function MorphingCore({ activeStep }: { activeStep: number }) {
     const meshRef = useRef<THREE.Mesh>(null)
-    const stepColors = ["#0C71C3", "#38bdf8", "#60a5fa", "#93c5fd"]
+    const stepColors = ["#11aff9", "#11aff9", "#11aff9", "#11aff9"]
 
     useFrame((state) => {
         const t = state.clock.getElapsedTime()
@@ -121,7 +121,7 @@ export default function BusinessProcesses() {
         <section id="business-processes-section" className="relative min-h-screen bg-white py-24 overflow-hidden selection:bg-blue-500/10">
             {/* 3D Canvas Background */}
             <div className="absolute inset-0 z-0 opacity-20">
-                <Canvas camera={{ position: [0, 0, 15], fov: 50 }}>
+                <Canvas camera={{ position: [0, 0, 15], fov: 50 }} >
                     <MorphingCore activeStep={activeIndex} />
                 </Canvas>
             </div>
@@ -155,13 +155,13 @@ export default function BusinessProcesses() {
                             <motion.button
                                 onClick={() => setActiveIndex(index)}
                                 className={`group relative flex flex-col items-center justify-center w-28 h-28 md:w-40 md:h-40 rounded-2xl border-2 transition-all duration-500 ${activeIndex === index
-                                    ? "bg-blue-600/10 border-blue-500 shadow-xl shadow-blue-500/10"
+                                    ? "bg-[#11aff9]/10 border-[#11aff9] shadow-xl shadow-[#11aff9]/10"
                                     : "bg-slate-50 border-slate-200 hover:border-slate-300"
                                     }`}
                                 whileHover={{ y: -5 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <div className={`mb-3 transition-colors duration-500 ${activeIndex === index ? "text-blue-600" : "text-slate-400 group-hover:text-slate-600"}`}>
+                                <div className={`mb-3 transition-colors duration-500 ${activeIndex === index ? "text-[#11aff9]" : "text-slate-400 group-hover:text-slate-600"}`}>
                                     <step.icon size={32} strokeWidth={1.5} />
                                 </div>
                                 <span className={`text-sm md:text-lg font-medium transition-colors duration-500 ${activeIndex === index ? "text-slate-900" : "text-slate-400 group-hover:text-slate-600"}`}>
@@ -179,7 +179,7 @@ export default function BusinessProcesses() {
 
                             {/* Arrow between steps */}
                             {index < PROCESS_STEPS.length - 1 && (
-                                <div className="hidden md:block text-blue-500/30">
+                                <div className="hidden md:block text-[#11aff9]">
                                     <div className="w-8 h-px bg-current relative">
                                         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-2 h-2 rounded-full bg-current" />
                                     </div>
@@ -199,7 +199,7 @@ export default function BusinessProcesses() {
                         transition={{ duration: 0.5, ease: "easeOut" }}
                         className="text-center max-w-5xl mx-auto"
                     >
-                        <h3 className="text-brand-blue text-3xl font-medium mb-4 text-glow">{currentStep.title}</h3>
+                        <h3 className="text-[#11aff9] text-3xl font-medium mb-4 text-glow">{currentStep.title}</h3>
                         <h4 className="text-slate-800 text-2xl font-medium mb-6">{currentStep.subtitle}</h4>
                         <p className="text-slate-500 text-xl max-w-3xl mx-auto mb-20 leading-relaxed font-light">
                             {currentStep.description}

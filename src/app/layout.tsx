@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 import SmoothScrolling from "@/components/providers/SmoothScrolling";
+import { FluidCursor } from "@/components/ui/fluid-cursor";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-sans antialiased`}>
+      <body className={`${montserrat.variable} font-sans antialiased uppercase`}>
+        
         <SmoothScrolling>
           {children}
         </SmoothScrolling>

@@ -41,13 +41,13 @@ export default function BlogSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/50 text-brand-blue font-medium text-sm mb-6"
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/50 text-[#11aff9] font-medium text-sm mb-6"
                         >
                             <span>Our Insights</span>
                         </motion.div>
                         <h2 className="text-4xl md:text-6xl font-medium text-slate-900 leading-tight tracking-tight">
                             Latest from <br />
-                            <span className="text-brand-blue">Our Blog</span>
+                            <span className="text-[#11aff9]">Our Blog</span>
                         </h2>
                     </div>
                     <Link href="/blog">
@@ -78,7 +78,7 @@ export default function BlogSection() {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 opacity-10">
-                                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent " />
+                                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-[#11aff9] via-transparent to-transparent " />
                                 </div>
                                 <div className="absolute top-4 left-4">
                                     <span className="px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-slate-900 text-xs font-bold shadow-sm">
@@ -98,7 +98,7 @@ export default function BlogSection() {
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-medium text-slate-900 mb-4 leading-tight group-hover:text-brand-blue transition-colors line-clamp-2 px-2">
+                            <h3 className="text-2xl font-medium text-slate-900 mb-4 leading-tight group-hover:text-[#11aff9] transition-colors line-clamp-2 px-2">
                                 {post.title}
                             </h3>
 
@@ -106,7 +106,7 @@ export default function BlogSection() {
                                 {post.excerpt}
                             </p>
 
-                            <div className="flex items-center gap-2 text-brand-blue font-medium px-2">
+                            <div className="flex items-center gap-2 text-[#11aff9] font-medium px-2">
                                 Read More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </div>
                         </motion.div>

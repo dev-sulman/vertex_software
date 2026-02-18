@@ -1,42 +1,80 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useMotionValue } from "framer-motion"
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 
 const solutions = [
     {
-        title: "Medication Abortion",
-        image: "/solution_ai_jpg_1771375317844.png",
+        title: "Software And AI",
+        image: "/webdata/app1.png",
         color: "from-blue-600/20 to-blue-900/40",
         hasSmallArrow: true
     },
     {
         title: "UI/UX Design",
-        image: "/solution_uiux_jpg_1771375333531.png",
+        image: "/webdata/app2.png",
         color: "from-orange-600/20 to-orange-900/40"
     },
     {
         title: "App & Web Development",
-        image: "/solution_webdev_jpg_1771375348741.png",
+        image: "/webdata/web.png",
         color: "from-indigo-600/20 to-indigo-900/40"
     },
     {
         title: "Digital Marketing",
-        image: "/solution_marketing_jpg_1771375364573.png",
+        image: "/webdata/sco-16.png",
         color: "from-slate-600/20 to-slate-900/40"
     }
 ]
 
 export default function Solutions() {
-    const scrollRef = useRef<HTMLDivElement>(null)
+    const [isPaused, setIsPaused] = useState(false)
+    const x = useMotionValue(0)
+    const containerRef = useRef<HTMLDivElement>(null)
+    const [trackWidth, setTrackWidth] = useState(0)
+
+    // Triple the solutions for a seamless infinite loop
+    const displaySolutions = [...solutions, ...solutions, ...solutions]
+
+    useEffect(() => {
+        if (containerRef.current) {
+            setTrackWidth(containerRef.current.scrollWidth / 3)
+        }
+    }, [])
+
+    useEffect(() => {
+        let lastTime = Date.now()
+        let frame: number
+
+        const animate = () => {
+            const now = Date.now()
+            const delta = now - lastTime
+            lastTime = now
+
+            if (!isPaused && trackWidth > 0) {
+                let currentX = x.get()
+                // Move by pixels per frame (adjust speed here)
+                currentX -= 0.05 * delta
+
+                // If we've scrolled past one full set, reset to start of next set
+                if (currentX <= -trackWidth) {
+                    currentX = 0
+                }
+                x.set(currentX)
+            }
+            frame = requestAnimationFrame(animate)
+        }
+
+        frame = requestAnimationFrame(animate)
+        return () => cancelAnimationFrame(frame)
+    }, [isPaused, trackWidth, x])
 
     const scroll = (direction: "left" | "right") => {
-        if (scrollRef.current) {
-            const { scrollLeft, clientWidth } = scrollRef.current
-            const scrollTo = direction === "left" ? scrollLeft - clientWidth / 2 : scrollLeft + clientWidth / 2
-            scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" })
-        }
+        const currentX = x.get()
+        const shift = 400
+        const targetX = direction === "left" ? currentX + shift : currentX - shift
+        x.set(targetX)
     }
 
     return (
@@ -69,44 +107,50 @@ export default function Solutions() {
 
                 {/* Cards Container */}
                 <div
-                    ref={scrollRef}
-                    className="flex gap-6 overflow-x-auto pb-12 scrollbar-none snap-x snap-mandatory"
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    className="relative overflow-hidden cursor-grab active:cursor-grabbing pb-12"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
                 >
-                    {solutions.map((solution, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="relative flex-none w-[300px] md:w-[380px] aspect-[4/5] rounded-[2.5rem] overflow-hidden group snap-start cursor-pointer transition-transform duration-500 hover:scale-[0.98]"
-                        >
-                            {/* Background Image */}
-                            <img
-                                src={solution.image}
-                                alt={solution.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
+                    <motion.div
+                        ref={containerRef}
+                        style={{ x }}
+                        drag="x"
+                        dragConstraints={{ left: -trackWidth * 2, right: 0 }}
+                        onDragStart={() => setIsPaused(true)}
+                        onDragEnd={() => setIsPaused(false)}
+                        className="flex gap-6"
+                    >
+                        {displaySolutions.map((solution, index) => (
+                            <motion.div
+                                key={index}
+                                className="relative flex-none w-[300px] md:w-[380px] aspect-[4/5] rounded-[2.5rem] overflow-hidden group select-none"
+                            >
+                                {/* Background Image */}
+                                <img
+                                    src={solution.image}
+                                    alt={solution.title}
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
+                                />
 
-                            {/* Gradient Overlay */}
-                            <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} via-black/20 to-transparent`} />
+                                {/* Gradient Overlay */}
+                                <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} via-black/20 to-transparent pointer-events-none`} />
 
-                            {/* Small Arrow (Optional based on image) */}
-                            {solution.hasSmallArrow && (
-                                <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white flex items-center justify-center text-gray-900 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <ArrowUpRight className="w-5 h-5" />
+                                {/* Small Arrow (Optional based on image) */}
+                                {solution.hasSmallArrow && (
+                                    <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white flex items-center justify-center text-gray-900 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <ArrowUpRight className="w-5 h-5" />
+                                    </div>
+                                )}
+
+                                {/* Content */}
+                                <div className="absolute inset-x-0 bottom-0 p-8 pointer-events-none">
+                                    <h3 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
+                                        {solution.title}
+                                    </h3>
                                 </div>
-                            )}
-
-                            {/* Content */}
-                            <div className="absolute inset-x-0 bottom-0 p-8">
-                                <h3 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
-                                    {solution.title}
-                                </h3>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
 
                 {/* Footer Descriptive Text */}
@@ -119,7 +163,7 @@ export default function Solutions() {
 
                 {/* Bottom Button */}
                 <div className="flex justify-center">
-                    <button className="px-12 py-5 rounded-full bg-[#2563eb] text-white font-medium text-lg hover:bg-blue-700 transition-all transform active:scale-95 shadow-2xl shadow-blue-500/30">
+                    <button className="px-12 py-5 rounded-full bg-[#11aff9] text-white font-medium text-lg hover:bg-[#11aff991] transition-all transform active:scale-95 shadow-2xl shadow-blue-500/30">
                         View All Solutions
                     </button>
                 </div>

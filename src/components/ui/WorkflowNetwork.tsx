@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Cpu, Zap, Database, Globe, Layers, Shield, Box, Code2, Layout, Smartphone } from "lucide-react"
+import Link from "next/link"
 
 interface Node {
     id: string
@@ -138,18 +139,17 @@ export default function WorkflowNetwork() {
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="relative px-10 py-6 rounded-[32px] bg-white border border-slate-200 shadow-[0_0_80px_rgba(37,99,235,0.15)] flex items-center gap-5"
+                    className="relative px-10 py-6 rounded-[32px] flex items-center gap-5"
                 >
-                    <div className="p-4 rounded-2xl bg-blue-600/10 text-blue-600 border border-blue-500/20">
-                        <Zap className="w-10 h-10 fill-current" />
-                    </div>
+
                     <div className="text-left">
-                        <div className="text-slate-900 font-medium text-2xl tracking-tight leading-none mb-1">VertxSoft Core</div>
-                        <div className="text-slate-400 text-sm tracking-wide">Infrastructure Orchestrator</div>
+                        <Link href="/" className="flex justify-center h-auto w-auto items-center text-center  gap-3 group">
+                            <img src="/herosvgicon/VertxSoft.png" alt="VertxSoft Logo" className="h-40 w-60 object-cover opacity-80 z-index-900" />
+                        </Link>
                     </div>
 
                     {/* Digital Glow */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/10 to-transparent rounded-[33px] blur-sm -z-10" />
+                    <div className="absolute -inset-1  rounded-[33px] blur-sm -z-10" />
                 </motion.div>
             </div>
 
@@ -173,14 +173,11 @@ export default function WorkflowNetwork() {
                     }}
                     className="z-30 cursor-pointer"
                 >
-                    <div className={`px-5 py-4 rounded-2xl bg-white border ${hoveredNode === node.id ? "border-blue-400 shadow-[0_0_30px_rgba(12,113,195,0.15)]" : "border-slate-200 shadow-lg"} transition-all flex items-center gap-4 group/node backdrop-blur-md`}>
-                        <div className="p-3 rounded-xl bg-slate-50 text-white/70 group-hover/node:bg-blue-50 transition-colors">
-                            <img src={node.icon} alt={node.label} className="w-8 h-8 object-contain" />
+                    <div className="transition-all flex items-center gap-4 group/node backdrop-blur-md">
+                        <div className="">
+                            <img src={node.icon} alt={node.label} className="w-35 h-25 object-contain" />
                         </div>
-                        <div className="text-left whitespace-nowrap">
-                            <div className="text-slate-900 font-medium text-base leading-tight mb-0.5">{node.label}</div>
-                            <div className="text-slate-400 text-[10px] tracking-wider uppercase">{node.sublabel}</div>
-                        </div>
+
                     </div>
                 </motion.div>
             ))}

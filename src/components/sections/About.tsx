@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import ScrollRadiusMedia from "@/components/ui/ScrollRadiusMedia"
 
 export default function About() {
     return (
-        <section id="about" className="py-24 px-6 relative overflow-hidden bg-blue-500">
+        <section id="about" className="py-24 px-6 relative overflow-hidden bg-[#11aff9]">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -40,30 +41,36 @@ export default function About() {
                     viewport={{ once: true }}
                     className="relative"
                 >
-                    <div className="aspect-square glass rounded-3xl p-8 flex items-center justify-center overflow-hidden">
-                        {/* Decorative Elements */}
-                        <div className="absolute top-10 left-10 w-20 h-20 bg-[#0C71C3]/20 rounded-full blur-xl" />
-                        <div className="absolute bottom-10 right-10 w-32 h-32 bg-[#004F8A]/20 rounded-full blur-2xl" />
+                    <ScrollRadiusMedia
+                        src="/herosvgicon/VertxSoft.png"
+                        type="image"
+                        className="aspect-square glass rounded-3xl"
+                    >
+                        <div className="absolute inset-0 p-8 flex items-center justify-center overflow-hidden z-20">
+                            {/* Decorative Elements */}
+                            <div className="absolute top-10 left-10 w-20 h-20 bg-[#0C71C3]/20 rounded-full blur-xl" />
+                            <div className="absolute bottom-10 right-10 w-32 h-32 bg-[#004F8A]/20 rounded-full blur-2xl" />
 
-                        <div className="grid grid-cols-2 gap-4 w-full h-full">
-                            <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 hover:translate-y-[-4px] transition-transform">
-                                <span className="text-3xl font-black text-[#0C71C3] mb-2">10+</span>
-                                <span className="text-xs uppercase tracking-wider opacity-50">Years Exp</span>
-                            </div>
-                            <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 translate-y-8 hover:translate-y-4 transition-transform">
-                                <span className="text-3xl font-black text-[#004F8A] mb-2">200+</span>
-                                <span className="text-xs uppercase tracking-wider opacity-50">Projects</span>
-                            </div>
-                            <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 hover:translate-y-[-4px] transition-transform">
-                                <span className="text-3xl font-black text-white mb-2">50+</span>
-                                <span className="text-xs uppercase tracking-wider opacity-50">Developers</span>
-                            </div>
-                            <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 translate-y-8 hover:translate-y-4 transition-transform">
-                                <span className="text-3xl font-black text-[#0C71C3] mb-2">99%</span>
-                                <span className="text-xs uppercase tracking-wider opacity-50">Satisfaction</span>
+                            <div className="grid grid-cols-2 gap-4 w-full h-full relative z-30">
+                                <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 hover:translate-y-[-4px] transition-transform">
+                                    <span className="text-3xl font-black text-[#0C71C3] mb-2">10+</span>
+                                    <span className="text-xs uppercase tracking-wider opacity-50">Years Exp</span>
+                                </div>
+                                <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 translate-y-8 hover:translate-y-4 transition-transform">
+                                    <span className="text-3xl font-black text-[#004F8A] mb-2">200+</span>
+                                    <span className="text-xs uppercase tracking-wider opacity-50">Projects</span>
+                                </div>
+                                <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 hover:translate-y-[-4px] transition-transform">
+                                    <span className="text-3xl font-black text-white mb-2">50+</span>
+                                    <span className="text-xs uppercase tracking-wider opacity-50">Developers</span>
+                                </div>
+                                <div className="glass rounded-2xl flex flex-col items-center justify-center p-6 translate-y-8 hover:translate-y-4 transition-transform">
+                                    <span className="text-3xl font-black text-[#0C71C3] mb-2">99%</span>
+                                    <span className="text-xs uppercase tracking-wider opacity-50">Satisfaction</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollRadiusMedia>
                 </motion.div>
             </div>
         </section>

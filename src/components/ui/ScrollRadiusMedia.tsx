@@ -11,6 +11,7 @@ interface ScrollRadiusMediaProps {
     startPadding?: number
     endPadding?: number
     className?: string
+    children?: React.ReactNode
 }
 
 export default function ScrollRadiusMedia({
@@ -21,6 +22,7 @@ export default function ScrollRadiusMedia({
     startPadding = 40,
     endPadding = 0,
     className = "",
+    children,
 }: ScrollRadiusMediaProps) {
     const containerRef = useRef<HTMLDivElement>(null)
 
@@ -75,6 +77,7 @@ export default function ScrollRadiusMedia({
                         />
                     )}
                 </div>
+                {children}
             </motion.div>
         </div>
     )
