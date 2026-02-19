@@ -86,7 +86,7 @@ export default function Hero() {
 
                 {/* Headline */}
                 <h1 className="hero-reveal text-[42px] md:text-[85px] font-medium leading-[1.05] tracking-tight text-[#111111] mb-8">
-                    Creating <span className="text-[#3DBEF8]">Software's</span><br />
+                    Creating <span className="text-[#0557A0]">Software's</span><br />
                     & Digital Excellence
                 </h1>
 
@@ -99,10 +99,10 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="hero-reveal flex flex-wrap justify-center gap-6">
-                    <button className="px-10 py-4 rounded-full border-2 border-[#3DBEF8] text-[#3DBEF8] font-medium text-lg hover:bg-blue-50 transition-all active:scale-95">
+                    <button className="px-10 py-4 rounded-full border-2 border-[#3DBEF8] text-[#0557A0] font-medium text-lg hover:bg-blue-50 transition-all active:scale-95">
                         Our Services
                     </button>
-                    <button className="px-10 py-4 rounded-full bg-[#3DBEF8] text-white font-medium text-lg hover:bg-[#2cb1ee] transition-all active:scale-95 shadow-xl shadow-blue-500/20">
+                    <button className="px-10 py-4 rounded-full bg-[#0557A0] text-white font-medium text-lg hover:bg-[#0557A0] transition-all active:scale-95 shadow-xl shadow-blue-500/20">
                         Get Free Quote
                     </button>
                 </div>

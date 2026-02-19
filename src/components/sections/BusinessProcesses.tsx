@@ -155,13 +155,13 @@ export default function BusinessProcesses() {
                             <motion.button
                                 onClick={() => setActiveIndex(index)}
                                 className={`group relative flex flex-col items-center justify-center w-28 h-28 md:w-40 md:h-40 rounded-2xl border-2 transition-all duration-500 ${activeIndex === index
-                                    ? "bg-[#11aff9]/10 border-[#11aff9] shadow-xl shadow-[#11aff9]/10"
+                                    ? "bg-[#0557A0]/10 border-[#11aff9] shadow-xl shadow-[#11aff9]/10"
                                     : "bg-slate-50 border-slate-200 hover:border-slate-300"
                                     }`}
                                 whileHover={{ y: -5 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <div className={`mb-3 transition-colors duration-500 ${activeIndex === index ? "text-[#11aff9]" : "text-slate-400 group-hover:text-slate-600"}`}>
+                                <div className={`mb-3 transition-colors duration-500 ${activeIndex === index ? "text-[#0557A0]" : "text-slate-400 group-hover:text-slate-600"}`}>
                                     <step.icon size={32} strokeWidth={1.5} />
                                 </div>
                                 <span className={`text-sm md:text-lg font-medium transition-colors duration-500 ${activeIndex === index ? "text-slate-900" : "text-slate-400 group-hover:text-slate-600"}`}>
@@ -179,7 +179,7 @@ export default function BusinessProcesses() {
 
                             {/* Arrow between steps */}
                             {index < PROCESS_STEPS.length - 1 && (
-                                <div className="hidden md:block text-[#11aff9]">
+                                <div className="hidden md:block text-[#0557A0]">
                                     <div className="w-8 h-px bg-current relative">
                                         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-2 h-2 rounded-full bg-current" />
                                     </div>
@@ -199,7 +199,7 @@ export default function BusinessProcesses() {
                         transition={{ duration: 0.5, ease: "easeOut" }}
                         className="text-center max-w-5xl mx-auto"
                     >
-                        <h3 className="text-[#11aff9] text-3xl font-medium mb-4 text-glow">{currentStep.title}</h3>
+                        <h3 className="text-[#0557A0] text-3xl font-medium mb-4 text-glow">{currentStep.title}</h3>
                         <h4 className="text-slate-800 text-2xl font-medium mb-6">{currentStep.subtitle}</h4>
                         <p className="text-slate-500 text-xl max-w-3xl mx-auto mb-20 leading-relaxed font-light">
                             {currentStep.description}
@@ -215,7 +215,7 @@ export default function BusinessProcesses() {
                                     transition={{ duration: 0.4, delay: i * 0.1 + 0.3 }}
                                     className="group"
                                 >
-                                    <div className="text-blue-600 font-medium text-2xl mb-4 group-hover:translate-x-1 transition-transform">
+                                    <div className="text-[#0557A0] font-medium text-2xl mb-4 group-hover:translate-x-1 transition-transform">
                                         {detail.id}
                                     </div>
                                     <h5 className="text-slate-900 text-xl font-medium mb-4 leading-snug">

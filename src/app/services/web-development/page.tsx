@@ -25,14 +25,14 @@ export default function WebDevelopment() {
                         transition={{ duration: 0.6 }}
                         className="max-w-4xl"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/50 text-brand-blue font-medium text-sm mb-8">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/50 text-[#0557A0] font-medium text-sm mb-8">
                             <Globe className="w-4 h-4" />
                             <span>Modern Web Solutions</span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-medium text-slate-900 mb-8 leading-[1.1] tracking-tight">
                             High-Performance <br />
-                            <span className="text-brand-blue">Web Development</span>
+                            <span className="text-[#0557A0]">Web Development</span>
                         </h1>
 
                         <p className="text-xl text-slate-500 mb-10 max-w-2xl leading-relaxed">
@@ -54,7 +54,7 @@ export default function WebDevelopment() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <div className="relative">
                             <div className="aspect-[4/3] rounded-[2rem] bg-white shadow-2xl shadow-slate-200/50 border border-slate-100 overflow-hidden flex items-center justify-center">
-                                <Code2 className="w-32 h-32 text-brand-blue opacity-10" />
+                                <Code2 className="w-32 h-32 text-[#0557A0] opacity-10" />
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="grid grid-cols-2 gap-4 p-8">
                                         {[
@@ -64,7 +64,7 @@ export default function WebDevelopment() {
                                             { icon: Search, label: "SEO-Ready" }
                                         ].map((item, i) => (
                                             <div key={i} className="bg-white p-6 rounded-2xl shadow-lg border border-slate-50 flex flex-col items-center gap-3">
-                                                <item.icon className="w-8 h-8 text-brand-blue" />
+                                                <item.icon className="w-8 h-8 text-[#0557A0]" />
                                                 <span className="text-sm font-medium text-slate-900">{item.label}</span>
                                             </div>
                                         ))}
@@ -90,10 +90,10 @@ export default function WebDevelopment() {
                                     "Enterprise API Integration"
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-start gap-4 group">
-                                        <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-brand-blue flex-shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                                        <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[#0557A0] flex-shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                                             <CheckCircle2 className="w-3.5 h-3.5" />
                                         </div>
-                                        <span className="text-lg font-medium text-slate-700 group-hover:text-brand-blue transition-colors">{item}</span>
+                                        <span className="text-lg font-medium text-slate-700 group-hover:text-[#0557A0] transition-colors">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -118,7 +118,7 @@ export default function WebDevelopment() {
                             { step: "04", title: "Launch", desc: "Testing, deployment, and optimization." }
                         ].map((item, i) => (
                             <div key={i} className="relative p-8 rounded-3xl bg-slate-50 hover:bg-blue-50 transition-colors group">
-                                <div className="text-4xl font-black text-slate-200 mb-4 group-hover:text-brand-blue transition-colors">{item.step}</div>
+                                <div className="text-4xl font-black text-slate-200 mb-4 group-hover:text-[#0557A0] transition-colors">{item.step}</div>
                                 <h3 className="text-xl font-medium text-slate-900 mb-2">{item.title}</h3>
                                 <p className="text-slate-500 text-sm">{item.desc}</p>
                             </div>

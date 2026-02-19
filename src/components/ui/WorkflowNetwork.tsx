@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState, useEffect, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Cpu, Zap, Database, Globe, Layers, Shield, Box, Code2, Layout, Smartphone } from "lucide-react"
 import Link from "next/link"
@@ -47,7 +47,7 @@ export default function WorkflowNetwork() {
         return () => observer.disconnect()
     }, [])
 
-    const renderPaths = () => {
+    const paths = useMemo(() => {
         if (dimensions.width === 0) return null
 
         return nodes.map((node) => {
@@ -103,7 +103,7 @@ export default function WorkflowNetwork() {
                     {/* Moving Dot */}
                     {isActive && (
                         <motion.circle
-                            r="2"
+                            r="3"
                             fill={node.color}
                             animate={{
                                 offsetDistance: ["0%", "100%"]
@@ -116,14 +116,13 @@ export default function WorkflowNetwork() {
                             }}
                             style={{
                                 offsetPath: `path("${pixelPath}")`,
-                                filter: `drop-shadow(0 0 4px ${node.color})`
                             }}
                         />
                     )}
                 </React.Fragment>
             )
         })
-    }
+    }, [dimensions, hoveredNode])
 
     return (
         <div ref={containerRef} className="relative w-full h-[600px] md:h-[800px] bg-white rounded-[40px] border border-slate-200 overflow-hidden group/network shadow-2xl shadow-blue-500/5">
@@ -131,7 +130,7 @@ export default function WorkflowNetwork() {
             <div className="absolute inset-0 bg-[radial-gradient(#0c71c3_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.05]" />
 
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                {renderPaths()}
+                {paths}
             </svg>
 
             {/* Central Source Node */}

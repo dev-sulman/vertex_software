@@ -108,12 +108,12 @@ export default function NextGenStats() {
                         transition={{ duration: 0.8 }}
                     >
                         <div className="flex items-center gap-2 mb-6">
-                            <div className="w-10 h-10 bg-[#11aff9] rounded-full flex items-center justify-center p-2 shadow-[0_0_20px_rgba(12,113,195,0.4)]">
+                            <div className="w-10 h-10 bg-[#0557A0] rounded-full flex items-center justify-center p-2 shadow-[0_0_20px_rgba(12,113,195,0.4)]">
                                 <div className="w-full h-full bg-white rounded-full" />
                             </div>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-light text-slate-400 mb-2 tracking-tight">NextGen Solutions</h2>
-                        <h3 className="text-4xl md:text-6xl font-medium text-[#11aff9] mb-8 leading-[1.1] tracking-tighter">
+                        <h3 className="text-4xl md:text-6xl font-medium text-[#0557A0] mb-8 leading-[1.1] tracking-tighter">
                             Powered by <br />
                             <span className="text-slate-800">Innovation + Ingenuity</span>
                         </h3>
@@ -123,7 +123,7 @@ export default function NextGenStats() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-12 py-4 border border-[#11aff9]/30 text-[#11aff9] rounded-xl hover:bg-[#11aff9]/10 transition-all text-lg font-medium"
+                            className="px-12 py-4 border border-[#11aff9]/30 text-[#0557A0] rounded-xl hover:bg-[#0557A0]/10 transition-all text-lg font-medium"
                         >
                             Get Quote
                         </motion.button>

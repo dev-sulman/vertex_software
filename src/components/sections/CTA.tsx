@@ -23,10 +23,10 @@ export default function CTA() {
                             <GravityText text="Take Your Business to the" />
                             <span className="text-gradient">Next Level</span> Right Now!
                         </h2>
-                        <p className="text-xl text-white/60 mb-12 max-w-xl">
+                        <p className="text-xl text-black/90 mb-12 max-w-xl">
                             Don't let your technology hold you back. Partner with Yellow Beam Tech and build the future today.
                         </p>
-                        <button className="px-10 py-5 rounded-full bg-[#11aff9] text-white font-black text-xl hover:scale-105 transition-transform flex items-center gap-3">
+                        <button className="px-10 py-5 rounded-full bg-[#0557A0] text-white font-black text-xl hover:scale-105 transition-transform flex items-center gap-3">
                             Start Now <ArrowRight className="w-6 h-6" />
                         </button>
                     </div>

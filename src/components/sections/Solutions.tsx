@@ -92,13 +92,13 @@ export default function Solutions() {
                     <div className="flex gap-4">
                         <button
                             onClick={() => scroll("left")}
-                            className="w-14 h-14 rounded-full border-2 border-blue-600 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all transform active:scale-95"
+                            className="w-14 h-14 rounded-full border-2 border-blue-600 flex items-center justify-center text-[#0557A0] hover:bg-black/50 hover:text-white transition-all transform active:scale-95"
                         >
                             <ArrowLeft className="w-6 h-6" />
                         </button>
                         <button
                             onClick={() => scroll("right")}
-                            className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-all transform active:scale-95 shadow-lg shadow-blue-500/20"
+                            className="w-14 h-14 rounded-full bg-[#0557A0] flex items-center justify-center text-white hover:bg-black/50 transition-all transform active:scale-95 shadow-lg shadow-blue-500/20"
                         >
                             <ArrowRight className="w-6 h-6" />
                         </button>
@@ -163,7 +163,7 @@ export default function Solutions() {
 
                 {/* Bottom Button */}
                 <div className="flex justify-center">
-                    <button className="px-12 py-5 rounded-full bg-[#11aff9] text-white font-medium text-lg hover:bg-[#11aff991] transition-all transform active:scale-95 shadow-2xl shadow-blue-500/30">
+                    <button className="px-12 py-5 rounded-full bg-[#0557A0] text-white font-medium text-lg hover:bg-[#11aff991] transition-all transform active:scale-95 shadow-2xl shadow-blue-500/30">
                         View All Solutions
                     </button>
                 </div>

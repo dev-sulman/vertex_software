@@ -22,15 +22,15 @@ import { MouseTrail } from "@/components/ui/mouse-trail"
 export default function Home() {
   return (
     <main className="min-h-screen">
-            <MouseTrail color="#3DBEF8" trailLength={30} className="absolute inset-0 pointer-events-none z-0 opacity-40" />
+      <MouseTrail color="#3DBEF8" trailLength={30} className="absolute inset-0 pointer-events-none z-0 opacity-40" />
       <Navbar />
       <Hero />
-      <VelocityScroll text="Digital Innovation • Immersive Experiences • Future Ready •" default_velocity={3} className="text-blue-600/10" />
+      <VelocityScroll text="Digital Innovation • Immersive Experiences • Future Ready •" default_velocity={3} className="text-[#0557A0]/10" />
       <Experience />
       <Solutions />
-      <VelocityScroll text="Pioneering Solutions • Seamless Integration • Boundless Creativity •" default_velocity={-3} className="text-blue-600/10" />
+      <VelocityScroll text="Pioneering Solutions • Seamless Integration • Boundless Creativity •" default_velocity={-3} className="text-[#0557A0]/10" />
       {/* <SelectedWork /> */}
-      <ReelCarousel projects={projects} />
+      {/* <ReelCarousel projects={projects} /> */}
       <About />
       {/* <Services /> */}
       <Benefits />

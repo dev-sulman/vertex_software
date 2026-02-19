@@ -61,7 +61,7 @@ export default function Contact() {
                             />
                         </div>
 
-                        <button className="w-full py-5 rounded-2xl bg-[#3DBEF8] text-white font-black text-lg hover:bg-[#11aff9] transition-colors flex items-center justify-center gap-3">
+                        <button className="w-full py-5 rounded-2xl bg-[#0557A0] text-white font-black text-lg hover:bg-[#0557A0] transition-colors flex items-center justify-center gap-3">
                             Send Message <Send className="w-5 h-5" />
                         </button>
                     </form>
@@ -74,7 +74,7 @@ export default function Contact() {
 function ContactInfo({ Icon, title, text }: { Icon: any, title: string, text: string }) {
     return (
         <div className="flex items-start gap-6 group">
-            <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 group-hover:bg-[#11aff9] group-hover:text-white transition-all">
+            <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 group-hover:bg-[#0557A0] group-hover:text-white transition-all">
                 <Icon className="w-6 h-6" />
             </div>
             <div>

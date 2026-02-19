@@ -74,7 +74,7 @@ export default function BlogPage() {
                         animate={{ opacity: 1, y: 0 }}
                     >
                         <h1 className="text-5xl md:text-7xl font-medium text-slate-900 mb-8 tracking-tight">
-                            Insights & <span className="text-[#11aff9]">Innovation</span>
+                            Insights & <span className="text-[#0557A0]">Innovation</span>
                         </h1>
                         <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
                             Stay ahead of the curve with our latest articles on technology, design, and growth strategies.
@@ -143,7 +143,7 @@ export default function BlogPage() {
                                     </div>
                                 </div>
 
-                                <h3 className="text-2xl font-medium text-slate-900 mb-4 leading-tight group-hover:text-[#11aff9] transition-colors line-clamp-2 px-2">
+                                <h3 className="text-2xl font-medium text-slate-900 mb-4 leading-tight group-hover:text-[#0557A0] transition-colors line-clamp-2 px-2">
                                     {post.title}
                                 </h3>
 
@@ -151,7 +151,7 @@ export default function BlogPage() {
                                     {post.excerpt}
                                 </p>
 
-                                <div className="flex items-center gap-2 text-[#11aff9] font-bold px-2">
+                                <div className="flex items-center gap-2 text-[#0557A0] font-bold px-2">
                                     Read Full Story <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </motion.div>

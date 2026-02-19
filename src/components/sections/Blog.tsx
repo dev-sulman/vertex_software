@@ -41,13 +41,13 @@ export default function BlogSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/50 text-[#11aff9] font-medium text-sm mb-6"
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/50 text-[#0557A0] font-medium text-sm mb-6"
                         >
                             <span>Our Insights</span>
                         </motion.div>
                         <h2 className="text-4xl md:text-6xl font-medium text-slate-900 leading-tight tracking-tight">
                             Latest from <br />
-                            <span className="text-[#11aff9]">Our Blog</span>
+                            <span className="text-[#0557A0]">Our Blog</span>
                         </h2>
                     </div>
                     <Link href="/blog">
@@ -98,7 +98,7 @@ export default function BlogSection() {
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-medium text-slate-900 mb-4 leading-tight group-hover:text-[#11aff9] transition-colors line-clamp-2 px-2">
+                            <h3 className="text-2xl font-medium text-slate-900 mb-4 leading-tight group-hover:text-[#0557A0] transition-colors line-clamp-2 px-2">
                                 {post.title}
                             </h3>
 
@@ -106,7 +106,7 @@ export default function BlogSection() {
                                 {post.excerpt}
                             </p>
 
-                            <div className="flex items-center gap-2 text-[#11aff9] font-medium px-2">
+                            <div className="flex items-center gap-2 text-[#0557A0] font-medium px-2">
                                 Read More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </div>
                         </motion.div>

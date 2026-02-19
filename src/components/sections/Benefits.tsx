@@ -46,7 +46,7 @@ export default function Benefits() {
                             key={idx}
                             className="bg-white p-10 md:p-16 hover:bg-slate-50 transition-colors group"
                         >
-                            <div className="text-6xl font-black text-zinc-200 mb-8 group-hover:text-[#11aff9]/80 transition-colors">
+                            <div className="text-6xl font-black text-zinc-200 mb-8 group-hover:text-[#0557A0]/80 transition-colors">
                                 {benefit.id}
                             </div>
                             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">{benefit.title}</h3>

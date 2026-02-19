@@ -143,7 +143,7 @@ export default function Navbar() {
                                             >
                                                 <Link
                                                     href={subItem.href}
-                                                    className="flex items-center justify-between px-5 py-3 text-slate-600 hover:text-brand-blue hover:bg-slate-50 transition-colors text-[15px] font-medium"
+                                                    className="flex items-center justify-between px-5 py-3 text-slate-600 hover:text-[#0557A0] hover:bg-slate-50 transition-colors text-[15px] font-medium"
                                                 >
                                                     {subItem.name}
                                                     {subItem.hasDropdown && <ChevronRight className="w-4 h-4 text-slate-400" />}
@@ -161,7 +161,7 @@ export default function Navbar() {
                                                             <Link
                                                                 key={nestedItem.name}
                                                                 href={nestedItem.href}
-                                                                className="block px-5 py-3 text-slate-600 hover:text-brand-blue hover:bg-slate-50 transition-colors text-[15px] font-medium"
+                                                                className="block px-5 py-3 text-slate-600 hover:text-[#0557A0] hover:bg-slate-50 transition-colors text-[15px] font-medium"
                                                             >
                                                                 {nestedItem.name}
                                                             </Link>
@@ -179,7 +179,7 @@ export default function Navbar() {
 
                 {/* CTA Button */}
                 <div className="hidden lg:block">
-                    <button className="px-8 py-3 rounded bg-[#3DBEF8] text-white text-[15px] hover:bg-[#2cb1ee] hover:shadow-[0_0_30px_rgba(12,113,195,0.4)] transition-all transform active:scale-95 font-medium">
+                    <button className="px-8 py-3 rounded bg-[#0557A0] text-white text-[15px] hover:bg-[#0557A0] hover:shadow-[0_0_30px_rgba(12,113,195,0.4)] transition-all transform active:scale-95 font-medium">
                         Get Free Quote
                     </button>
                 </div>
@@ -235,7 +235,7 @@ export default function Navbar() {
                                                 {link.subItems?.map((subItem) => (
                                                     <div key={subItem.name}>
                                                         <div
-                                                            className="flex items-center justify-between px-5 py-3 text-slate-600 hover:text-brand-blue font-medium"
+                                                            className="flex items-center justify-between px-5 py-3 text-slate-600 hover:text-[#0557A0] font-medium"
                                                             onClick={() => {
                                                                 if (subItem.hasDropdown) {
                                                                     setMobileSubExpanded(mobileSubExpanded === subItem.name ? null : subItem.name)
@@ -259,7 +259,7 @@ export default function Navbar() {
                                                                     <Link
                                                                         key={nestedItem.name}
                                                                         href={nestedItem.href}
-                                                                        className="block px-5 py-3 text-slate-500 hover:text-brand-blue text-sm font-medium"
+                                                                        className="block px-5 py-3 text-slate-500 hover:text-[#0557A0] text-sm font-medium"
                                                                         onClick={() => setIsOpen(false)}
                                                                     >
                                                                         {nestedItem.name}

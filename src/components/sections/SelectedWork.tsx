@@ -123,7 +123,7 @@ export default function SelectedWork() {
                                     </div>
 
                                     {/* Bottom Shadow Glow */}
-                                    <div className="absolute -bottom-8 left-12 right-12 h-12 bg-blue-600/10 blur-[60px] -z-10 rounded-full" />
+                                    <div className="absolute -bottom-8 left-12 right-12 h-12 bg-[#0557A0]/10 blur-[60px] -z-10 rounded-full" />
                                 </div>
                             </motion.div>
                         ))}
