@@ -16,9 +16,9 @@ interface MouseTrailProps {
 }
 
 export function MouseTrail({
-    color = '#E1FF01', // Primary color
-    lineWidth = 3,
-    trailLength = 20,
+    color = '#111111', // Primary color
+    lineWidth = 4,
+    trailLength = 10,
     className = "fixed inset-0 pointer-events-none z-9999"
 }: MouseTrailProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);

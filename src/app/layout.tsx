@@ -23,8 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-sans antialiased uppercase`}>
-        
+      <body suppressHydrationWarning className={`${montserrat.variable} font-sans antialiased uppercase`}>
+
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
