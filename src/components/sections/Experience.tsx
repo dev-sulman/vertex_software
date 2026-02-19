@@ -75,7 +75,7 @@ export default function Experience() {
                                     We don't just build software — we craft digital experiences that <span className="text-[#0557A0] font-semibold">inspire users</span> and accelerate business growth through smart, scalable technology.
                                 </p>
                                 <p>
-                                    Our solutions are designed with precision, blending creativity, innovation, and functionality to deliver <span className="text-electric-cyan font-bold">seamless performance</span> across every platform.
+                                    Our solutions are designed with precision, blending creativity, innovation, and functionality to deliver <span className="text-[#0557A0] font-bold">seamless performance</span> across every platform.
                                 </p>
                             </motion.div>
                         </div>

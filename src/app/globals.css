@@ -37,7 +37,7 @@
 :root {
   --background: #FFFFFF;
   --foreground: #0F172A;
-  --brand-blue: #0C71C3;
+  --brand-blue: #0557A0;
 }
 
 body {
@@ -113,7 +113,7 @@ body {
 
 /* Gradient Text */
 .text-gradient {
-  background: linear-gradient(to right, #38bdf8, #ffffff, #818cf8);
+  background: linear-gradient(to right, #0557A0, #ffffff, #0557A0);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -130,7 +130,7 @@ body {
 }
 
 .text-gradient-blue {
-  background: linear-gradient(to right, #ffffff, #38bdf8);
+  background: linear-gradient(to right, #ffffff, #0557A0);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

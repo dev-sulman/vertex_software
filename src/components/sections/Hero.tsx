@@ -99,7 +99,7 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="hero-reveal flex flex-wrap justify-center gap-6">
-                    <button className="px-10 py-4 rounded-full border-2 border-[#3DBEF8] text-[#0557A0] font-medium text-lg hover:bg-blue-50 transition-all active:scale-95">
+                    <button className="px-10 py-4 rounded-full border-2 border-[#0557A0] text-[#0557A0] font-medium text-lg hover:bg-blue-50 transition-all active:scale-95">
                         Our Services
                     </button>
                     <button className="px-10 py-4 rounded-full bg-[#0557A0] text-white font-medium text-lg hover:bg-[#0557A0] transition-all active:scale-95 shadow-xl shadow-blue-500/20">
