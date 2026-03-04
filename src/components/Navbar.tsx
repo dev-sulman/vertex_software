@@ -83,23 +83,25 @@ export default function Navbar() {
                 >
                     <div className="relative flex items-center overflow-hidden h-14">
                         <img
-                            src="/herosvgicon/smallV.png"
+                            src="/newlogoimages/logo1.png"
                             alt="VertxSoft Logo"
                             className={cn(
-                                "h-10 w-auto object-cover opacity-90 transition-transform duration-500",
+                                "h-22 w-auto object-cover opacity-90 transition-transform duration-500",
                                 logoHovered ? "scale-110" : "scale-100"
                             )}
                         />
                         <div className={cn(
                             "flex items-center overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
-                            logoHovered ? "max-w-[200px] opacity-100" : "max-w-0 opacity-0"
+                            logoHovered ? "max-w-[300px] opacity-100" : "max-w-0 opacity-0"
                         )}>
-                            <span className={cn(
-                                "text-xl font-bold text-[#133848] whitespace-nowrap pl-3 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
-                                logoHovered ? "translate-x-0" : "translate-x-[-20px]"
-                            )}>
-                                VertxSoft
-                            </span>
+                            <img
+                                src="/newlogoimages/Crafted-Vetx-1th.png"
+                                alt="Vertex Software"
+                                className={cn(
+                                    "h-12 w-auto object-contain pl-3 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                                    logoHovered ? "translate-x-0" : "translate-x-[-20px]"
+                                )}
+                            />
                         </div>
                     </div>
                 </Link>

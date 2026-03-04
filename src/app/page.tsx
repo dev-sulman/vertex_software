@@ -22,7 +22,7 @@ import { MouseTrail } from "@/components/ui/mouse-trail"
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <MouseTrail color="#0557A0" trailLength={30} className="fixed inset-0 pointer-events-none z-50 opacity-40" />
+      {/* <MouseTrail color="#0557A0" trailLength={30} className="fixed inset-0 pointer-events-none z-50 opacity-40" /> */}
       <Navbar />
       <Hero />
       <VelocityScroll text="Digital Innovation • Immersive Experiences • Future Ready •" default_velocity={3} className="text-[#0557A0]/10" />
