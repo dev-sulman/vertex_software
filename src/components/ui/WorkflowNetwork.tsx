@@ -143,7 +143,7 @@ export default function WorkflowNetwork() {
 
                     <div className="text-left">
                         <Link href="/" className="flex justify-center h-auto w-auto items-center text-center  gap-3 group">
-                            <img src="/herosvgicon/VertxSoft.png" alt="VertxSoft Logo" className="h-40 w-60 object-cover opacity-80 z-index-900" />
+                            <img src="/newlogoimages/logo1.png" alt="VertxSoft Logo" className="h-40 w-60 object-cover opacity-80 z-index-900" />
                         </Link>
                     </div>
 

@@ -4,6 +4,7 @@ import "./globals.css";
 
 import SmoothScrolling from "@/components/providers/SmoothScrolling";
 import { FluidCursor } from "@/components/ui/fluid-cursor";
+import { MaintenancePopup } from "@/components/ui/MaintenancePopup";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className={`${montserrat.variable} font-sans antialiased uppercase`}>
 
         <SmoothScrolling>
+          <MaintenancePopup />
           {children}
         </SmoothScrolling>
       </body>

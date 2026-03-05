@@ -28,7 +28,7 @@ export default function About() {
 
                 <div className="relative aspect-square glass rounded-3xl overflow-hidden">
                     <img
-                        src="/herosvgicon/VertxSoft.png"
+                        src="/newlogoimages/logo1.png"
                         alt="About VertxSoft"
                         className="w-full h-full object-cover"
                     />

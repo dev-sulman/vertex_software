@@ -25,7 +25,7 @@ export default function Footer() {
                     <div className="flex flex-col gap-6">
                         <Link href="/" className="flex items-center gap-2">
                             <div className="p-1  rounded-lg w-50 h-30 flex items-center justify-center overflow-hidden">
-                                <img src="/VERTXSOFT.png" alt="VertxSoft Logo" className="w-full h-auto object-contain" />
+                                <img src="/newlogoimages/showonhover.png" alt="VertxSoft Logo" className="w-full h-auto object-contain" />
                             </div>
 
                         </Link>
@@ -71,10 +71,9 @@ export default function Footer() {
                     <div>
                         <h4 className="font-medium mb-6">Address</h4>
                         <div className="text-black/50 text-sm leading-relaxed">
-                            30 N Gould St Ste R<br />
-                            Sheridan, WY 82801<br />
-                            <span className="ext-black/50">Email:</span> info@vertxsoft.com<br />
-                            <span className="ext-black/50">Phone:</span> +1 (509) 588 0999
+                            XYZ<br />
+                            <span className="ext-black/50">Email:</span> info@xyz.com<br />
+                            <span className="ext-black/50">Phone:</span> +1 (234) 567 8901
                         </div>
                     </div>
                 </div>

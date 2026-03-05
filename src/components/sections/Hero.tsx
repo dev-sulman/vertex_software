@@ -41,7 +41,7 @@ export default function Hero() {
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-[0.10]">
                     <Image
-                        src="/herosvgicon/herowave.png"
+                        src="/"
                         alt="VertxSoft"
                         fill
                         className="object-cover"

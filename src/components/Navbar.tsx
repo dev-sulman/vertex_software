@@ -76,7 +76,7 @@ export default function Navbar() {
             <div className="max-w-9xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo Section */}
                 <Link
-                    href="/"
+                    href="/showonhover.png"
                     className="group flex items-center"
                     onMouseEnter={() => setLogoHovered(true)}
                     onMouseLeave={() => setLogoHovered(false)}
@@ -98,7 +98,7 @@ export default function Navbar() {
                                 src="/newlogoimages/Crafted-Vetx-1th.png"
                                 alt="Vertex Software"
                                 className={cn(
-                                    "h-12 w-auto object-contain pl-3 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                                    "h-12  w-auto object-contain pl-3 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
                                     logoHovered ? "translate-x-0" : "translate-x-[-20px]"
                                 )}
                             />

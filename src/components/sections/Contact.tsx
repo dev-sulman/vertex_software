@@ -20,9 +20,9 @@ export default function Contact() {
                     </p>
 
                     <div className="space-y-8">
-                        <ContactInfo Icon={MapPin} title="Address" text="30 N Gould St Ste R Sheridan, WY 82801" />
-                        <ContactInfo Icon={Mail} title="Email" text="info@yellowbeamtech.com" />
-                        <ContactInfo Icon={Phone} title="Phone" text="+1 (509) 588 0999" />
+                        <ContactInfo Icon={MapPin} title="Address" text="XYZ" />
+                        <ContactInfo Icon={Mail} title="Email" text="XYZ.com" />
+                        <ContactInfo Icon={Phone} title="Phone" text="+1 123 567 8901" />
                     </div>
                 </motion.div>
 
