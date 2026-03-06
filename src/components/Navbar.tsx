@@ -76,7 +76,7 @@ export default function Navbar() {
             <div className="max-w-9xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo Section */}
                 <Link
-                    href="/showonhover.png"
+                    href="/"
                     className="group flex items-center"
                     onMouseEnter={() => setLogoHovered(true)}
                     onMouseLeave={() => setLogoHovered(false)}
