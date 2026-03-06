@@ -30,10 +30,9 @@ export default function Technologies() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="text-[42px] md:text-[72px] font-medium text-slate-900 leading-[1.05] tracking-tight mb-6 max-w-4xl mx-auto"
+                    className="text-[40px] md:text-[72px] font-medium text-slate-900 leading-[1.05] tracking-tight mb-6 max-w-5xl mx-auto"
                 >
-                    Built with a <span className="text-[#0557A0]">Future-Proof</span> <br className="hidden md:block" />
-                    Technology Ecosystem
+                    Built with a <span className="text-[#0557A0]">Future-Proof</span> Technology Ecosystem
                 </motion.h2>
 
                 <motion.p

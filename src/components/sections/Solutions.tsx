@@ -78,12 +78,12 @@ export default function Solutions() {
     }
 
     return (
-        <section className="py-24 px-6 bg-white overflow-hidden">
+        <section className="pt-16 pb-24 px-6 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
                     <div className="max-w-2xl">
-                        <h2 className="text-[40px] md:text-[56px] font-medium text-[#111111] leading-[1.1] tracking-tight mb-4">
+                        <h2 className="text-[32px] md:text-[42px] font-medium text-[#111111] leading-[1.2] tracking-tight mb-2">
                             Customized Solutions <br />
                             for Every Goal
                         </h2>
@@ -125,15 +125,17 @@ export default function Solutions() {
                                 key={index}
                                 className="relative flex-none w-[300px] md:w-[380px] aspect-[4/5] rounded-[2.5rem] overflow-hidden group select-none"
                             >
-                                {/* Background Image */}
-                                <img
-                                    src={solution.image}
-                                    alt={solution.title}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
-                                />
+                                {/* Background Image Container */}
+                                <div className="absolute inset-0 bg-gray-50/50 p-6 border-2 border-gray-100/80 rounded-[2.5rem] overflow-hidden">
+                                    <img
+                                        src={solution.image}
+                                        alt={solution.title}
+                                        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                                    />
+                                </div>
 
                                 {/* Gradient Overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} via-black/20 to-transparent pointer-events-none`} />
+                                <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} via-black/10 to-transparent pointer-events-none rounded-[2.5rem]`} />
 
                                 {/* Small Arrow (Optional based on image) */}
                                 {solution.hasSmallArrow && (
@@ -143,8 +145,8 @@ export default function Solutions() {
                                 )}
 
                                 {/* Content */}
-                                <div className="absolute inset-x-0 bottom-0 p-8 pointer-events-none">
-                                    <h3 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
+                                <div className="absolute inset-x-0 bottom-0 p-8 pointer-events-none bg-black/5 backdrop-blur-[2px]">
+                                    <h3 className="text-xl md:text-2xl font-medium text-white tracking-tight drop-shadow-md">
                                         {solution.title}
                                     </h3>
                                 </div>

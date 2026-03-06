@@ -129,7 +129,7 @@ export default function WorkflowNetwork() {
             {/* Grid Background */}
             <div className="absolute inset-0 bg-[radial-gradient(#0c71c3_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.05]" />
 
-            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10 ">
                 {paths}
             </svg>
 
@@ -143,7 +143,7 @@ export default function WorkflowNetwork() {
 
                     <div className="text-left">
                         <Link href="/" className="flex justify-center h-auto w-auto items-center text-center  gap-3 group">
-                            <img src="/newlogoimages/logo1.png" alt="VertxSoft Logo" className="h-40 w-60 object-cover opacity-80 z-index-900" />
+                            <img src="/newlogoimages/logo1.png" alt="VertxSoft Logo" className="h-40 w-60 object-cover z-20 " />
                         </Link>
                     </div>
 

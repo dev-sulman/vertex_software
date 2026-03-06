@@ -43,11 +43,11 @@ export default function Footer() {
 
                     {/* Links */}
                     <div>
-                        <h4 className="font-medium mb-6">Services</h4>
+                        <h4 className="font-bold mb-6">Services</h4>
                         <ul className="flex flex-col gap-4">
                             {footerLinks.services.map((link) => (
                                 <li key={link.name}>
-                                    <Link href={link.href} className="text-black/50 hover:text-[#0C71C3] transition-colors text-sm">
+                                    <Link href={link.href} className="text-black/90 hover:text-[#0C71C3] transition-colors text-sm">
                                         {link.name}
                                     </Link>
                                 </li>
@@ -56,11 +56,11 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-medium mb-6">Company</h4>
+                        <h4 className="font-bold mb-6">Company</h4>
                         <ul className="flex flex-col gap-4">
                             {footerLinks.company.map((link) => (
                                 <li key={link.name}>
-                                    <Link href={link.href} className="text-black/50 hover:text-[#0C71C3] transition-colors text-sm">
+                                    <Link href={link.href} className="text-black/90 hover:text-[#0C71C3] transition-colors text-sm">
                                         {link.name}
                                     </Link>
                                 </li>
@@ -69,16 +69,15 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-medium mb-6">Address</h4>
-                        <div className="text-black/50 text-sm leading-relaxed">
+                        <h4 className="font-bold mb-6">Address</h4>
+                        <div className="text-black/90 text-sm leading-relaxed">
                             XYZ<br />
-                            <span className="ext-black/50">Email:</span> info@xyz.com<br />
-                            <span className="ext-black/50">Phone:</span> +1 (234) 567 8901
+                            <span className="ext-black/90">Email:</span> info@xyz.com<br />
+                            <span className="ext-black/90">Phone:</span> +1 (234) 567 8901
                         </div>
                     </div>
                 </div>
-
-                <div className="border-t border-black pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-black/30 text-xs">
+                <div className="border-t border-black pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-black/90 text-xs">
                     <p>Copyright © 2026 VertxSoft. All rights reserved.</p>
                     <div className="flex gap-8">
                         <button className="hover:text-white transition-colors">Terms of Service</button>

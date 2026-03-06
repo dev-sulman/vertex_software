@@ -31,24 +31,28 @@ export default function Experience() {
                     </div>
 
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                        {/* Stats Column */}
-                        <div className="lg:col-span-4 flex flex-col gap-12 border-slate-200 lg:border-r lg:pr-12">
-                            {stats.map((stat, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, x: -30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <div className="text-6xl lg:text-7xl font-medium text-[#0557A0] mb-3 text-glow">
-                                        {stat.number}
-                                    </div>
-                                    <div className="text-slate-800 text-lg font-medium leading-tight max-w-[200px]">
-                                        {stat.label}
-                                    </div>
-                                </motion.div>
-                            ))}
+                        {/* Image Column */}
+                        <div className="lg:col-span-4 border-slate-200 lg:border-r lg:pr-12">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                whileHover={{
+                                    scale: 1.02,
+                                    y: -8,
+                                    transition: { duration: 0.4, ease: "easeOut" }
+                                }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                                className="relative aspect-square rounded-3xl overflow-hidden border border-slate-200 shadow-2xl"
+                            >
+                                <Image
+                                    src="/cutting-edge-tech.png"
+                                    alt="Cutting Edge Technology"
+                                    fill
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-tr from-[#0557A0]/20 via-transparent to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            </motion.div>
                         </div>
 
                         {/* Content Column */}
@@ -83,16 +87,7 @@ export default function Experience() {
                 </div>
             </div>
 
-            {/* Final Full Width Image Transition */}
-            <div className="w-screen relative left-1/2 -translate-x-1/2 mt-4">
-                <Image
-                    src="/traffic-trail-with-building-2026-01-09-08-43-52-utc.jpg"
-                    alt="Hero Wave"
-                    width={1920}
-                    height={1080}
-                    className="w-full h-auto"
-                />
-            </div>
+
         </section>
     )
 }

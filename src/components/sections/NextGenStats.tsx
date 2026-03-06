@@ -37,17 +37,17 @@ function StatsBackground() {
 const stats = [
     {
         label: "Years of Experience",
-        value: "7+",
+        value: "4+",
         video: "/videos/hero.mp4"
     },
     {
         label: "Global Clientele",
-        value: "320+",
+        value: "37+",
         video: "/videos/dark-it-office-with-computers-2025-12-17-05-53-22-utc.mov"
     },
     {
         label: "Pool of Talent",
-        value: "150+",
+        value: "42+",
         video: "/videos/procurement-management-infographic-2026-01-28-04-16-56-utc.mov"
     },
     {
@@ -81,8 +81,9 @@ function NumberCounter({ value, isHovered, isFirst }: { value: string, isHovered
     return (
         <motion.span
             ref={ref}
-            animate={{ scale: isHovered || isFirst ? 1.1 : 1 }}
-            className={`text-6xl md:text-8xl font-bold tracking-tighter transition-colors duration-500 ${isHovered || isFirst ? 'text-white' : 'text-slate-900'}`}
+            animate={{ scale: isHovered || isFirst ? 1.05 : 1 }}
+            transition={{ ease: "easeInOut", duration: 0.4 }}
+            className={`text-6xl md:text-8xl font-black tracking-tighter transition-colors duration-500 ${isHovered || isFirst ? 'text-white' : 'text-slate-900'}`}
         >
             <motion.span>{displayValue}</motion.span>
         </motion.span>
@@ -159,42 +160,57 @@ function StatCard({ stat, index }: { stat: any, index: number }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: index * 0.1, ease: "easeOut" }
+            }}
             viewport={{ once: true }}
-            className="group relative aspect-square rounded-[40px] overflow-hidden bg-zinc-900 border border-white/5 cursor-pointer shadow-2xl"
+            className="group relative aspect-square rounded-[40px] overflow-hidden bg-zinc-900 border border-white/5 cursor-pointer shadow-2xl transition-all"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            whileHover={{ y: -10, borderColor: "rgba(12,113,195,0.5)" }}
+            whileHover={{
+                scale: 1.05,
+                y: -15,
+                borderColor: "rgba(12,113,195,0.5)",
+                transition: { type: "tween", ease: "easeInOut", duration: 0.4 }
+            }}
         >
-            {/* Base Background (shown when NOT hovered) - Deep Black */}
-            <div className={`absolute inset-0 bg-[white] transition-opacity duration-500 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
+            {/* Base Background (shown when NOT hovered) - White */}
+            <div className={`absolute inset-0 bg-white transition-opacity duration-500 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
 
-            {/* Hover Glow */}
-            <div className={`absolute inset-0  bg-white transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+            {/* Hover Glow / Video Background Container */}
+            <div className={`absolute inset-0 transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+                {/* Background Color/Glow for Active State */}
+                <div className="absolute inset-0 bg-[#0557A0]/5" />
 
-            {/* Video Background (revealed on hover or first card) */}
-            <div className={`absolute inset-0 z-10 transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-                <video
-                    ref={videoRef}
-                    src={stat.video}
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 " />
+                {/* Video Background (revealed on hover or first card) */}
+                <div className={`absolute inset-0 z-10 transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+                    <video
+                        ref={videoRef}
+                        src={stat.video}
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-80"
+                    />
+                    {/* Dark Gradient Overlay for Text Contrast */}
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent z-10" />
+                </div>
             </div>
 
             {/* Content Overlay */}
             <div className="absolute inset-0 z-20 p-10 flex flex-col justify-between">
                 <motion.span
                     animate={{ y: isActive ? -5 : 0 }}
-                    className={`text-xl md:text-2xl font-medium tracking-tight transition-colors duration-500 ${isActive ? 'text-white/30' : 'text-slate-600'}`}
+                    transition={{ ease: "easeInOut", duration: 0.4 }}
+                    className={`text-xl md:text-2xl font-bold tracking-tight transition-colors duration-500 ${isActive ? 'text-white' : 'text-[#0557A0]'}`}
                 >
                     {stat.label}
                 </motion.span>
-                <NumberCounter value={stat.value} isHovered={isHovered} isFirst={isFirst} />
+                <div className={isActive ? 'text-white' : 'text-slate-900 font-bold'}>
+                    <NumberCounter value={stat.value} isHovered={isHovered} isFirst={isFirst} />
+                </div>
             </div>
 
             {/* Shine Effect */}
